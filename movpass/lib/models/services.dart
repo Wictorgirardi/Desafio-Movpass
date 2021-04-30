@@ -17,7 +17,7 @@ class Services {
   int duration;
   int id;
   String label;
-  int price;
+  num price;
 
   factory Services.fromJson(Map<String, dynamic> json) => Services(
         duration: json["duration"],
