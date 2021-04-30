@@ -4,7 +4,7 @@ import 'package:movpass/models/services.dart';
 class RemoteServices {
   static var client = http.Client();
 
-  static Future<List<Services>> fetchProducts() async {
+  static Future<List<Services>> fetchServicos() async {
     var response = await client.get('https://dev.movpass.com.br/api/services/');
     if (response.statusCode == 200) {
       var jsonString = response.body;
