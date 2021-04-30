@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:movpass/controllers/serviceController.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:movpass/widgets/serviceCard.dart';
 
 class Home extends StatelessWidget {
   final ServiceController serviceController = Get.put(ServiceController());
@@ -64,14 +65,10 @@ class Home extends StatelessWidget {
                                 crossAxisCount: 1,
                                 itemCount:
                                     serviceController.servicosList.length,
-                                crossAxisSpacing: 16,
-                                mainAxisSpacing: 16,
+                                padding: EdgeInsets.all(16),
                                 itemBuilder: (context, index) {
-                                  return Container(
-                                    color: Colors.red,
-                                    width: 100,
-                                    height: 100,
-                                  );
+                                  return ServiceCard(
+                                      serviceController.servicosList[index]);
                                 },
                                 staggeredTileBuilder: (index) =>
                                     StaggeredTile.fit(1),
