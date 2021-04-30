@@ -23,6 +23,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: new Stack(fit: StackFit.expand, children: <Widget>[
         new Positioned(
           child: new Align(
@@ -65,7 +66,8 @@ class Home extends StatelessWidget {
                                 crossAxisCount: 1,
                                 itemCount:
                                     serviceController.servicosList.length,
-                                padding: EdgeInsets.all(16),
+                                padding: EdgeInsets.only(
+                                    left: 16, right: 16, top: 28),
                                 itemBuilder: (context, index) {
                                   return ServiceCard(
                                       serviceController.servicosList[index]);

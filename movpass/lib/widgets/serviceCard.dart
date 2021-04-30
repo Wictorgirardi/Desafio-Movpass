@@ -72,7 +72,8 @@ class ServiceCard extends StatelessWidget {
               height: 36,
               child: OutlinedButton(
                 onPressed: () {
-                  Get.to(Details());
+                  Get.to(
+                      Details(service.label, service.price, service.duration));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
