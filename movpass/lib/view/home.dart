@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
         ),
         Container(
           padding: EdgeInsets.only(
-              top: displayHeight(context) / 6, left: 17.0, right: 17.0),
+              top: displayHeight(context) / 5.6, left: 17.0, right: 17.0),
           child: Text(
             ('title').tr,
             style: TextStyle(
@@ -64,6 +64,7 @@ class Home extends StatelessWidget {
                             else
                               return StaggeredGridView.countBuilder(
                                 crossAxisCount: 1,
+                                mainAxisSpacing: 16,
                                 itemCount:
                                     serviceController.servicosList.length,
                                 padding: EdgeInsets.only(

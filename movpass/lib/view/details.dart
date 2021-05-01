@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:movpass/models/services.dart';
 
+// ignore: must_be_immutable
 class Details extends StatelessWidget {
   int duration;
   String label;
@@ -27,10 +27,8 @@ class Details extends StatelessWidget {
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
-                icon: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                ),
+                icon:
+                    const Icon(Icons.arrow_back_ios, color: Color(0xff242A2C)),
                 onPressed: () {
                   Get.back();
                 },
@@ -40,7 +38,7 @@ class Details extends StatelessWidget {
         ),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(18),
+            padding: EdgeInsets.all(16),
             child: Column(
               children: [
                 Row(

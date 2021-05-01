@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
 import 'package:movpass/models/services.dart';
 import 'package:movpass/view/details.dart';
 
@@ -67,21 +66,10 @@ class ServiceCard extends StatelessWidget {
             ),
             // ignore: deprecated_member_use
             Container(
-              margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
-              width: double.infinity,
-              height: 36,
-              child: OutlinedButton(
-                onPressed: () {
-                  Get.to(() =>
-                      Details(service.label, service.price, service.duration));
-                },
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                ))),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                margin: EdgeInsets.only(top: 16.0),
+                width: double.infinity,
+                // ignore: deprecated_member_use
+                child: OutlineButton(
                   child: Text(
                     ('details').tr,
                     style: TextStyle(
@@ -90,9 +78,17 @@ class ServiceCard extends StatelessWidget {
                       color: Color(0xff8B379B),
                     ),
                   ),
-                ),
-              ),
-            )
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0)),
+                  padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                  onPressed: () {
+                    Get.to(() => Details(
+                        service.label, service.price, service.duration));
+                  },
+                  borderSide: BorderSide(
+                    color: Color(0xff8B379B),
+                  ),
+                ))
           ]),
         ),
       ),
