@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:get/get.dart';
 
 List<Services> servicesFromJson(String str) =>
     List<Services>.from(json.decode(str).map((x) => Services.fromJson(x)));
@@ -24,7 +25,7 @@ class Services {
         id: json["id"],
         label: json["label"].toString(),
         price: json["price"].toString() == '0'
-            ? 'Grátis'
+            ? ('free').tr
             : 'R\$' + json["price"].toString(),
       );
 
