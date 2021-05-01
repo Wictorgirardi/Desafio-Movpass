@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movpass/models/services.dart';
+import 'package:movpass/theme/colors.dart';
 import 'package:movpass/view/details.dart';
 
 class ServiceCard extends StatelessWidget {
@@ -26,7 +27,7 @@ class ServiceCard extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff242A2C)),
+                      color: darkGrey),
                 ),
                 Spacer(),
                 Icon(Icons.timer, size: 12),
@@ -38,7 +39,7 @@ class ServiceCard extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff242A2C)),
+                      color: darkGrey),
                 ),
               ],
             ),
@@ -52,14 +53,14 @@ class ServiceCard extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xff242A2C)),
+                      color: darkGrey),
                 ),
                 Text(
                   (service.price),
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff242A2C)),
+                      color: darkGrey),
                 ),
                 Spacer(),
               ],
@@ -75,7 +76,7 @@ class ServiceCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xff8B379B),
+                      color: purple,
                     ),
                   ),
                   shape: RoundedRectangleBorder(
@@ -86,7 +87,7 @@ class ServiceCard extends StatelessWidget {
                         service.label, service.price, service.duration));
                   },
                   borderSide: BorderSide(
-                    color: Color(0xff8B379B),
+                    color: purple,
                   ),
                 ))
           ]),

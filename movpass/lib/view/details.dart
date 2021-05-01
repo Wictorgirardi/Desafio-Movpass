@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:movpass/theme/colors.dart';
 
 // ignore: must_be_immutable
 class Details extends StatelessWidget {
@@ -20,15 +21,12 @@ class Details extends StatelessWidget {
           title: Text(
             (label).tr,
             style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Color(0xff242A2C)),
+                fontSize: 16, fontWeight: FontWeight.w600, color: darkGrey),
           ),
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
-                icon:
-                    const Icon(Icons.arrow_back_ios, color: Color(0xff242A2C)),
+                icon: Icon(Icons.arrow_back_ios, color: darkGrey),
                 onPressed: () {
                   Get.back();
                 },
@@ -48,7 +46,7 @@ class Details extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xff242A2C)),
+                          color: darkGrey),
                     ),
                     SizedBox(width: 8),
                     Text(
@@ -56,7 +54,7 @@ class Details extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xff242A2C)),
+                          color: darkGrey),
                     ),
                   ],
                 ),
@@ -68,7 +66,7 @@ class Details extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xff242A2C)),
+                          color: darkGrey),
                     ),
                     SizedBox(width: 8),
                     Text(
@@ -76,7 +74,7 @@ class Details extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xff242A2C)),
+                          color: darkGrey),
                     ),
                   ],
                 ),
@@ -89,7 +87,7 @@ class Details extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xff242A2C)),
+                            color: darkGrey),
                       );
                     case 'functional':
                       return Text(
@@ -97,7 +95,7 @@ class Details extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xff242A2C)),
+                            color: darkGrey),
                       );
                     case 'hiit':
                       return Text(
@@ -105,7 +103,7 @@ class Details extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xff242A2C)),
+                            color: darkGrey),
                       );
                     case 'stretching':
                       return Text(
@@ -113,7 +111,7 @@ class Details extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xff242A2C)),
+                            color: darkGrey),
                       );
                   }
                 }())
