@@ -22,7 +22,7 @@ class ServiceCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  ((service.label).toString()).tr,
+                  ((service.label)).tr,
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -34,7 +34,7 @@ class ServiceCard extends StatelessWidget {
                   width: 5.5,
                 ),
                 Text(
-                  (service.duration).toString() + ('time').tr,
+                  (service.duration) + ('time').tr,
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
@@ -55,7 +55,7 @@ class ServiceCard extends StatelessWidget {
                       color: Color(0xff242A2C)),
                 ),
                 Text(
-                  'R\$' + (service.price).toString(),
+                  (service.price),
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,

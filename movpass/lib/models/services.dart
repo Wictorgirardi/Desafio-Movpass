@@ -14,16 +14,18 @@ class Services {
     this.price,
   });
 
-  int duration;
+  String duration;
   int id;
   String label;
-  num price;
+  String price;
 
   factory Services.fromJson(Map<String, dynamic> json) => Services(
-        duration: json["duration"],
+        duration: json["duration"].toString(),
         id: json["id"],
-        label: json["label"],
-        price: json["price"],
+        label: json["label"].toString(),
+        price: json["price"].toString() == '0'
+            ? 'Grátis'
+            : 'R\$' + json["price"].toString(),
       );
 
   Map<String, dynamic> toJson() => {

@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 // ignore: must_be_immutable
 class Details extends StatelessWidget {
-  int duration;
+  String duration;
   String label;
-  num price;
+  String price;
 
   Details(this.label, this.price, this.duration);
 
@@ -52,7 +52,7 @@ class Details extends StatelessWidget {
                     ),
                     SizedBox(width: 8),
                     Text(
-                      'R\$' + price.toString(),
+                      price,
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -72,7 +72,7 @@ class Details extends StatelessWidget {
                     ),
                     SizedBox(width: 8),
                     Text(
-                      duration.toString() + ('time').tr,
+                      duration + ('time').tr,
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -82,7 +82,7 @@ class Details extends StatelessWidget {
                 ),
                 SizedBox(height: 16),
                 (() {
-                  switch (label.toString()) {
+                  switch (label) {
                     case 'free_evaluation':
                       return Text(
                         ('evaluation_text').tr,
