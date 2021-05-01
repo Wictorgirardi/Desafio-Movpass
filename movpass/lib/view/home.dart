@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
           padding: EdgeInsets.only(
               top: displayHeight(context) / 6, left: 17.0, right: 17.0),
           child: Text(
-            'Treinos Movpass',
+            ('title').tr,
             style: TextStyle(
                 fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
           ),

@@ -23,7 +23,7 @@ class ServiceCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  service.label,
+                  ((service.label).toString()).tr,
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -35,7 +35,7 @@ class ServiceCard extends StatelessWidget {
                   width: 5.5,
                 ),
                 Text(
-                  (service.duration).toString() + ' minutos',
+                  (service.duration).toString() + ('time').tr,
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
@@ -49,7 +49,7 @@ class ServiceCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  'Preço: ',
+                  ('price').tr,
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
@@ -72,7 +72,7 @@ class ServiceCard extends StatelessWidget {
               height: 36,
               child: OutlinedButton(
                 onPressed: () {
-                  Get.to(
+                  Get.to(() =>
                       Details(service.label, service.price, service.duration));
                 },
                 style: ButtonStyle(
@@ -83,7 +83,7 @@ class ServiceCard extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
                   child: Text(
-                    'Ver Detalhes',
+                    ('details').tr,
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,

@@ -18,7 +18,7 @@ class Details extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text(
-            label,
+            (label).tr,
             style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
@@ -42,7 +42,55 @@ class Details extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(18),
             child: Column(
-              children: [],
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      ('price').tr,
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xff242A2C)),
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      'R\$' + price.toString(),
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff242A2C)),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 17),
+                Row(
+                  children: [
+                    Text(
+                      ('duration').tr,
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xff242A2C)),
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      duration.toString() + ('time').tr,
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff242A2C)),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16),
+                Text(
+                  'Uma conversa com um de nossos profissionais para, juntos, buscarem entender melhor as suas necessidades físicas, considerando suas características individuais, para orientá-lo com maior precisão na sua rotina de exercícios. A avaliação via vídeo chamada dura entre 15 e 20 minutos, e você sairá com dicas e uma sugestão de rotina de exercícios baseados nos seus objetivos e na busca de uma vida cada vez mais saudável. A Avaliação Gratuita mensal é uma forma efetiva de acompanhar a sua evolução junto com a Movpass :)',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff242A2C)),
+                ),
+              ],
             ),
           ),
         ));
