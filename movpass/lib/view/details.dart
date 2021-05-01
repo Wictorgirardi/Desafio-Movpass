@@ -83,13 +83,42 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 16),
-                Text(
-                  'Uma conversa com um de nossos profissionais para, juntos, buscarem entender melhor as suas necessidades físicas, considerando suas características individuais, para orientá-lo com maior precisão na sua rotina de exercícios. A avaliação via vídeo chamada dura entre 15 e 20 minutos, e você sairá com dicas e uma sugestão de rotina de exercícios baseados nos seus objetivos e na busca de uma vida cada vez mais saudável. A Avaliação Gratuita mensal é uma forma efetiva de acompanhar a sua evolução junto com a Movpass :)',
-                  style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff242A2C)),
-                ),
+                (() {
+                  switch (label.toString()) {
+                    case 'free_evaluation':
+                      return Text(
+                        ('evaluation_text').tr,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xff242A2C)),
+                      );
+                    case 'functional':
+                      return Text(
+                        ('functional_text').tr,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xff242A2C)),
+                      );
+                    case 'hiit':
+                      return Text(
+                        ('hiit_text').tr,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xff242A2C)),
+                      );
+                    case 'stretching':
+                      return Text(
+                        ('stretching_text').tr,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xff242A2C)),
+                      );
+                  }
+                }())
               ],
             ),
           ),
