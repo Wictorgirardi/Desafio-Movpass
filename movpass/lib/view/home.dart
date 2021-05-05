@@ -28,9 +28,13 @@ class Home extends StatelessWidget {
         new Positioned(
           child: new Align(
             alignment: FractionalOffset.topCenter,
-            child: Image(
-              image: AssetImage(
-                'lib/assets/background.png',
+            child: ColorFiltered(
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.3), BlendMode.darken),
+              child: Image(
+                image: AssetImage(
+                  'lib/assets/background.png',
+                ),
               ),
             ),
           ),
@@ -41,7 +45,10 @@ class Home extends StatelessWidget {
           child: Text(
             ('title').tr,
             style: TextStyle(
-                fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
+                fontFamily: 'Mulish',
+                fontSize: 32,
+                fontWeight: FontWeight.w700,
+                color: Colors.white),
           ),
         ),
         new Positioned(
@@ -57,6 +64,7 @@ class Home extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
+                        SizedBox(height: 5),
                         Expanded(
                           child: Obx(() {
                             if (serviceController.isLoading.value)
@@ -68,7 +76,7 @@ class Home extends StatelessWidget {
                                 itemCount:
                                     serviceController.servicosList.length,
                                 padding: EdgeInsets.only(
-                                    left: 16, right: 16, top: 28),
+                                    left: 16, right: 16, top: 23),
                                 itemBuilder: (context, index) {
                                   return ServiceCard(
                                       serviceController.servicosList[index]);

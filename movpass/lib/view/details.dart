@@ -21,7 +21,10 @@ class Details extends StatelessWidget {
           title: Text(
             (label).tr,
             style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w600, color: darkGrey),
+                fontFamily: 'Mulish',
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: darkGrey),
           ),
           leading: Builder(
             builder: (BuildContext context) {
@@ -44,8 +47,9 @@ class Details extends StatelessWidget {
                     Text(
                       ('price').tr,
                       style: TextStyle(
-                          fontSize: 14,
+                          fontFamily: 'Mulish',
                           fontWeight: FontWeight.w700,
+                          fontSize: 14,
                           color: darkGrey),
                     ),
                     SizedBox(width: 8),
@@ -53,6 +57,7 @@ class Details extends StatelessWidget {
                       price,
                       style: TextStyle(
                           fontSize: 14,
+                          fontFamily: 'Mulish',
                           fontWeight: FontWeight.w400,
                           color: darkGrey),
                     ),
@@ -65,6 +70,7 @@ class Details extends StatelessWidget {
                       ('duration').tr,
                       style: TextStyle(
                           fontSize: 14,
+                          fontFamily: 'Mulish',
                           fontWeight: FontWeight.w700,
                           color: darkGrey),
                     ),
@@ -73,6 +79,7 @@ class Details extends StatelessWidget {
                       duration + ('time').tr,
                       style: TextStyle(
                           fontSize: 14,
+                          fontFamily: 'Mulish',
                           fontWeight: FontWeight.w400,
                           color: darkGrey),
                     ),
@@ -86,6 +93,7 @@ class Details extends StatelessWidget {
                         ('evaluation_text').tr,
                         style: TextStyle(
                             fontSize: 14,
+                            fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
                             color: darkGrey),
                       );
@@ -94,6 +102,7 @@ class Details extends StatelessWidget {
                         ('functional_text').tr,
                         style: TextStyle(
                             fontSize: 14,
+                            fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
                             color: darkGrey),
                       );
@@ -102,6 +111,7 @@ class Details extends StatelessWidget {
                         ('hiit_text').tr,
                         style: TextStyle(
                             fontSize: 14,
+                            fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
                             color: darkGrey),
                       );
@@ -110,6 +120,7 @@ class Details extends StatelessWidget {
                         ('stretching_text').tr,
                         style: TextStyle(
                             fontSize: 14,
+                            fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
                             color: darkGrey),
                       );

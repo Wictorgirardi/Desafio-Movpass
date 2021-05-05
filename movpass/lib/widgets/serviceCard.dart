@@ -26,11 +26,12 @@ class ServiceCard extends StatelessWidget {
                   ((service.label)).tr,
                   style: TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Mulish',
+                      fontWeight: FontWeight.w500,
                       color: darkGrey),
                 ),
                 Spacer(),
-                Icon(Icons.timer, size: 12),
+                Icon(Icons.timer, size: 14),
                 SizedBox(
                   width: 5.5,
                 ),
@@ -38,6 +39,7 @@ class ServiceCard extends StatelessWidget {
                   (service.duration) + ('time').tr,
                   style: TextStyle(
                       fontSize: 12,
+                      fontFamily: 'Mulish',
                       fontWeight: FontWeight.w400,
                       color: darkGrey),
                 ),
@@ -52,6 +54,7 @@ class ServiceCard extends StatelessWidget {
                   ('price').tr,
                   style: TextStyle(
                       fontSize: 14,
+                      fontFamily: 'Mulish',
                       fontWeight: FontWeight.w700,
                       color: darkGrey),
                 ),
@@ -59,6 +62,7 @@ class ServiceCard extends StatelessWidget {
                   (service.price),
                   style: TextStyle(
                       fontSize: 14,
+                      fontFamily: 'Mulish',
                       fontWeight: FontWeight.w400,
                       color: darkGrey),
                 ),
@@ -75,6 +79,7 @@ class ServiceCard extends StatelessWidget {
                     ('details').tr,
                     style: TextStyle(
                       fontSize: 14,
+                      fontFamily: 'Mulish',
                       fontWeight: FontWeight.w700,
                       color: purple,
                     ),
