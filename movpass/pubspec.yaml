@@ -52,16 +52,22 @@ flutter:
   fonts:
     - family: Mulish
       fonts:
-        - asset: lib/fonts/Mulish-Bold.ttf
-          weight: 900
-        - asset: lib/fonts/Mulish-Medium.ttf
-          weight: 700
-        - asset: lib/fonts/Mulish-Regular.ttf
-          weight: 500
-        - asset: lib/fonts/Mulish-Light.ttf
-          weight: 400
         - asset: lib/fonts/Mulish-ExtraLight.ttf
-          weight: 100
+          weight: 200
+        - asset: lib/fonts/Mulish-Light.ttf
+          weight: 300
+        - asset: lib/fonts/Mulish-Regular.ttf
+          weight: 400
+        - asset: lib/fonts/Mulish-Medium.ttf
+          weight: 500
+        - asset: lib/fonts/Mulish-SemiBold.ttf
+          weight: 600
+        - asset: lib/fonts/Mulish-Bold.ttf
+          weight: 700
+        - asset: lib/fonts/Mulish-ExtraBold.ttf
+          weight: 800
+        - asset: lib/fonts/Mulish-Black.ttf
+          weight: 900
   assets:
     - lib/assets/
 

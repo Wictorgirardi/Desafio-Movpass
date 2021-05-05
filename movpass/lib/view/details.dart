@@ -23,7 +23,7 @@ class Details extends StatelessWidget {
             style: TextStyle(
                 fontFamily: 'Mulish',
                 fontSize: 16,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 color: darkGrey),
           ),
           leading: Builder(

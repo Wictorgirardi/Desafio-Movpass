@@ -27,7 +27,7 @@ class ServiceCard extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                       color: darkGrey),
                 ),
                 Spacer(),
