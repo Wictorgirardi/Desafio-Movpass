@@ -8,16 +8,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: 'MovPass',
+      debugShowCheckedModeBanner: false,
+      translations: AppTranslations(),
       locale: Get.deviceLocale,
-      translations: Texts(),
-      fallbackLocale: Locale('pt', 'BR'),
-      title: 'Movpass',
+      fallbackLocale: Locale('en', 'US'),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Home(),

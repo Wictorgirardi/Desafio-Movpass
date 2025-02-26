@@ -76,7 +76,7 @@ class Home extends StatelessWidget {
                                 itemCount:
                                     serviceController.servicosList.length,
                                 padding: EdgeInsets.only(
-                                    left: 16, right: 16, top: 23),
+                                    left: 16, right: 16, top: 23, bottom: 23),
                                 itemBuilder: (context, index) {
                                   return ServiceCard(
                                       serviceController.servicosList[index]);
