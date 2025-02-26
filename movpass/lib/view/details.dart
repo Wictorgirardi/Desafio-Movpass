@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:movpass/theme/colors.dart';
 
 // ignore: must_be_immutable
 class Details extends StatelessWidget {
-  String duration;
-  String label;
-  String price;
+  final String label;
+  final String price;
+  final String duration;
 
-  Details(this.label, this.price, this.duration);
+  Details(this.label, this.price, this.duration, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class Details extends StatelessWidget {
           elevation: 0,
           title: Text(
             (label).tr,
-            style: TextStyle(
+            style: const TextStyle(
                 fontFamily: 'Mulish',
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
@@ -29,7 +28,7 @@ class Details extends StatelessWidget {
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: darkGrey),
+                icon: const Icon(Icons.arrow_back_ios, color: darkGrey),
                 onPressed: () {
                   Get.back();
                 },
@@ -39,23 +38,23 @@ class Details extends StatelessWidget {
         ),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child: Column(
               children: [
                 Row(
                   children: [
                     Text(
                       ('price').tr,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontFamily: 'Mulish',
                           fontWeight: FontWeight.w700,
                           fontSize: 14,
                           color: darkGrey),
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     Text(
                       price,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 14,
                           fontFamily: 'Mulish',
                           fontWeight: FontWeight.w400,
@@ -63,21 +62,21 @@ class Details extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 17),
+                const SizedBox(height: 17),
                 Row(
                   children: [
                     Text(
                       ('duration').tr,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 14,
                           fontFamily: 'Mulish',
                           fontWeight: FontWeight.w700,
                           color: darkGrey),
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     Text(
                       duration + ('time').tr,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 14,
                           fontFamily: 'Mulish',
                           fontWeight: FontWeight.w400,
@@ -85,13 +84,13 @@ class Details extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 (() {
                   switch (label) {
                     case 'free_evaluation':
                       return Text(
                         ('evaluation_text').tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
@@ -100,7 +99,7 @@ class Details extends StatelessWidget {
                     case 'functional':
                       return Text(
                         ('functional_text').tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
@@ -109,7 +108,7 @@ class Details extends StatelessWidget {
                     case 'hiit':
                       return Text(
                         ('hiit_text').tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,
@@ -118,7 +117,16 @@ class Details extends StatelessWidget {
                     case 'stretching':
                       return Text(
                         ('stretching_text').tr,
-                        style: TextStyle(
+                        style: const TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'Mulish',
+                            fontWeight: FontWeight.w400,
+                            color: darkGrey),
+                      );
+                    default:
+                      return Text(
+                        '',
+                        style: const TextStyle(
                             fontSize: 14,
                             fontFamily: 'Mulish',
                             fontWeight: FontWeight.w400,

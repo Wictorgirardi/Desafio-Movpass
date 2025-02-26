@@ -6,7 +6,7 @@ import 'package:movpass/view/details.dart';
 
 class ServiceCard extends StatelessWidget {
   final Services service;
-  const ServiceCard(this.service);
+  const ServiceCard(this.service, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,28 +16,28 @@ class ServiceCard extends StatelessWidget {
       ),
       elevation: 1,
       child: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             Row(
               children: [
                 Text(
-                  ((service.label)).tr,
-                  style: TextStyle(
+                  (service.label).tr,
+                  style: const TextStyle(
                       fontSize: 16,
                       fontFamily: 'Mulish',
                       fontWeight: FontWeight.w600,
                       color: darkGrey),
                 ),
-                Spacer(),
-                Icon(Icons.timer, size: 14),
-                SizedBox(
+                const Spacer(),
+                const Icon(Icons.timer, size: 14),
+                const SizedBox(
                   width: 5.5,
                 ),
                 Text(
                   (service.duration) + ('time').tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 12,
                       fontFamily: 'Mulish',
                       fontWeight: FontWeight.w400,
@@ -45,14 +45,14 @@ class ServiceCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 4,
             ),
             Row(
               children: [
                 Text(
                   ('price').tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 14,
                       fontFamily: 'Mulish',
                       fontWeight: FontWeight.w700,
@@ -60,42 +60,42 @@ class ServiceCard extends StatelessWidget {
                 ),
                 Text(
                   (service.price),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 14,
                       fontFamily: 'Mulish',
                       fontWeight: FontWeight.w400,
                       color: darkGrey),
                 ),
-                Spacer(),
+                const Spacer(),
               ],
             ),
-            // ignore: deprecated_member_use
             Container(
-                margin: EdgeInsets.only(top: 16.0),
-                width: double.infinity,
-                // ignore: deprecated_member_use
-                child: OutlineButton(
-                  child: Text(
-                    ('details').tr,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w700,
-                      color: purple,
-                    ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                  onPressed: () {
-                    Get.to(() => Details(
-                        service.label, service.price, service.duration));
-                  },
-                  borderSide: BorderSide(
+              margin: const EdgeInsets.only(top: 16.0),
+              width: double.infinity,
+              child: OutlinedButton(
+                child: Text(
+                  ('details').tr,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Mulish',
+                    fontWeight: FontWeight.w700,
                     color: purple,
                   ),
-                ))
-          ]),
+                ),
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                  side: const BorderSide(color: purple),
+                  padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                ),
+                onPressed: () {
+                  Get.to(() =>
+                      Details(service.label, service.price, service.duration));
+                },
+              ),
+            )
+          ],
         ),
       ),
     );

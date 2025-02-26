@@ -9,16 +9,16 @@ String servicesToJson(List<Services> data) =>
 
 class Services {
   Services({
-    this.duration,
-    this.id,
-    this.label,
-    this.price,
+    required this.duration,
+    required this.id,
+    required this.label,
+    required this.price,
   });
 
-  String duration;
-  int id;
-  String label;
-  String price;
+  final String duration;
+  final int id;
+  final String label;
+  final String price;
 
   factory Services.fromJson(Map<String, dynamic> json) => Services(
         duration: json["duration"].toString(),

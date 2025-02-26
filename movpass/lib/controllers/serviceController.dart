@@ -4,8 +4,8 @@ import 'package:movpass/services/remote_services.dart';
 
 class ServiceController extends GetxController {
   var isLoading = true.obs;
-  // ignore: deprecated_member_use
-  var servicosList = List<Services>().obs;
+  // Use the proper list initialization syntax
+  var servicosList = <Services>[].obs;
 
   @override
   void onInit() {
@@ -17,9 +17,7 @@ class ServiceController extends GetxController {
     try {
       isLoading(true);
       var servicos = await RemoteServices.fetchServicos();
-      if (servicos != null) {
-        servicosList.value = servicos;
-      }
+      servicosList.value = servicos;
     } finally {
       isLoading(false);
     }

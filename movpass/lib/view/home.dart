@@ -24,9 +24,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: new Stack(fit: StackFit.expand, children: <Widget>[
-        new Positioned(
-          child: new Align(
+      body: Stack(fit: StackFit.expand, children: <Widget>[
+        Positioned(
+          child: Align(
             alignment: FractionalOffset.topCenter,
             child: ColorFiltered(
               colorFilter: ColorFilter.mode(
@@ -51,8 +51,8 @@ class Home extends StatelessWidget {
                 color: Colors.white),
           ),
         ),
-        new Positioned(
-            child: new Align(
+        Positioned(
+            child: Align(
                 alignment: FractionalOffset.bottomCenter,
                 child: Container(
                     height: displayHeight(context) / 1.3,
@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
                             if (serviceController.isLoading.value)
                               return Center(child: CircularProgressIndicator());
                             else
-                              return StaggeredGridView.countBuilder(
+                              return MasonryGridView.count(
                                 crossAxisCount: 1,
                                 mainAxisSpacing: 16,
                                 itemCount:
@@ -81,8 +81,6 @@ class Home extends StatelessWidget {
                                   return ServiceCard(
                                       serviceController.servicosList[index]);
                                 },
-                                staggeredTileBuilder: (index) =>
-                                    StaggeredTile.fit(1),
                               );
                           }),
                         )
